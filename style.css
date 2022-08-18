@@ -1,0 +1,64 @@
+:root {
+  --background-color: rgb(23, 35, 83);
+  --backgroud-secundary: rgb(124, 124, 124)
+;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: var(--background-color);
+  padding: 10px;
+}
+
+body h1 {
+  display: none;
+}
+
+body .logo {
+  width: 80px;
+}
+
+body .vista {
+  margin: 10px auto;
+}
+
+body .vista .carousel {
+  max-width: 600px;
+  margin: auto;
+}
+
+body .nota {
+  width: 100%;
+}
+
+body .nota h2 {
+  text-align: start;
+}
+
+body .nota .cartelera {
+  position: relative;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  overflow: scroll;
+  max-width: 780px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .nota .cartelera img {
+  height: 145px;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=style.css.map */

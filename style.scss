@@ -1,0 +1,51 @@
+:root{
+    --background-color: rgb(23, 35, 83);
+    --backgroud-secundary: rgb(124, 124, 124)
+}
+*{
+    margin: 0;
+    padding: 0;   
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 10px;
+
+    h1{
+        display: none;
+    }
+
+    .logo{
+        width: 80px;
+    }
+
+    .vista{
+        margin: 10px auto;
+        .carousel{
+            max-width: 600px;
+            margin: auto;
+        }
+    }
+
+    .nota{
+        width: 100%;
+        h2{
+            text-align: start;
+        }
+        .cartelera{
+            position: relative;
+            scroll-snap-type: x mandatory;
+            overflow: scroll;
+            max-width: 780px;
+            display: flex;
+            img{
+                height: 145px;
+                margin-right: 10px;
+            }
+        }
+
+    }
+}
