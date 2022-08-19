@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 :root {
   --background-color: rgb(23, 35, 83);
-  --backgroud-secundary: rgb(124, 124, 124)
-;
+  --background-segundo: rgb(61, 76, 132);
+  --backgroud-tercero: rgb(124, 124, 124);
 }
 
 * {
@@ -18,7 +19,188 @@ body {
           align-items: center;
   text-align: center;
   background-color: var(--background-color);
-  padding: 10px;
+  max-width: 850px;
+  margin: auto;
+}
+
+body .nav {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+body .nav i {
+  color: white;
+  cursor: pointer;
+  margin-bottom: 19px;
+}
+
+body .nav .main-header {
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .nav .main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  margin-left: -100%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+body .nav .main-nav.show {
+  margin-left: 0;
+}
+
+body .nav .nav-links {
+  background-color: var(--background-segundo);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .nav .link-item {
+  margin-top: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+body .nav .link-item::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+body .nav .link-item:hover::after {
+  width: 100%;
+}
+
+body .nav .button-menu {
+  width: 100%;
+  height: 30px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  margin-bottom: 19px;
+}
+
+body .nav .button-menu span {
+  width: 25px;
+  height: 2px;
+  margin-bottom: 4px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: 100;
+}
+
+body .nav .button-menu.close span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(0px, 0px);
+          transform: rotate(45deg) translate(0px, 0px);
+  background: #ffffff;
+}
+
+body .nav .button-menu.close span:nth-child(2) {
+  -webkit-transform: rotate(-45deg) translate(-8px, 5px);
+          transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+body .nav .button-menu.close span:nth-child(3) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  body .nav .button-menu {
+    display: none;
+  }
+  body .nav .main-nav {
+    position: static;
+    margin-left: 0;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    height: 100%;
+  }
+  body .nav .nav-links {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background: white;
+  }
+  body .nav .link-item {
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 2rem;
+  }
 }
 
 body h1 {
@@ -27,10 +209,12 @@ body h1 {
 
 body .logo {
   width: 80px;
+  padding: 10px 0 0 0;
 }
 
 body .vista {
-  margin: 10px auto;
+  margin: auto auto 25px;
+  padding: 10px;
 }
 
 body .vista .carousel {
@@ -40,25 +224,42 @@ body .vista .carousel {
 
 body .nota {
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  padding: 10px;
 }
 
 body .nota h2 {
   text-align: start;
+  margin-left: 3%;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 25px;
 }
 
 body .nota .cartelera {
+  padding: 10px;
   position: relative;
+  overflow: scroll;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
-  overflow: scroll;
   max-width: 780px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
+}
+
+body .nota .cartelera::-webkit-scrollbar {
+  display: none;
 }
 
 body .nota .cartelera img {
   height: 145px;
-  margin-right: 10px;
+  margin-right: 12px;
+  -webkit-box-shadow: 2px 6px 6px -4px lightblue;
+          box-shadow: 2px 6px 6px -4px lightblue;
 }
 /*# sourceMappingURL=style.css.map */
