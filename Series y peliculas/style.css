@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 :root {
   --background-color: rgb(23, 35, 83);
   --background-segundo: rgb(61, 76, 132);
@@ -11,16 +10,19 @@
 }
 
 body {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
   background-color: var(--background-color);
-  max-width: 850px;
-  margin: auto;
+  text-align: center;
+}
+
+body h1 {
+  color: red;
+  margin-top: 15px;
+  display: none;
+}
+
+body .logo {
+  width: 160px;
+  margin-top: 15px;
 }
 
 body .nav {
@@ -43,7 +45,7 @@ body .nav {
 body .nav i {
   color: white;
   cursor: pointer;
-  margin-bottom: 19px;
+  margin: auto 0;
 }
 
 body .nav .main-header {
@@ -55,6 +57,7 @@ body .nav .main-header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: auto 0;
 }
 
 body .nav .main-nav {
@@ -203,93 +206,26 @@ body .nav .button-menu.close span:nth-child(3) {
   }
 }
 
-body h1 {
-  display: none;
-}
-
-body .logo {
-  width: 80px;
-  padding: 10px 0 0 0;
-}
-
-body .vista {
-  margin: auto auto 25px;
+body .series {
   padding: 10px;
-}
-
-body .vista .carousel {
-  max-width: 600px;
-  margin: auto;
-}
-
-body .nota {
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px;
-  padding: 10px;
-}
-
-body .nota h2 {
-  text-align: start;
-  margin-left: 3%;
-  color: white;
-  font-family: 'Bebas Neue', cursive;
-  font-size: 25px;
-}
-
-body .nota .cartelera {
-  padding: 10px;
-  position: relative;
-  overflow: scroll;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  max-width: 780px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
-}
-
-body .nota .cartelera::-webkit-scrollbar {
-  display: none;
-}
-
-body .nota .cartelera img {
-  height: 145px;
-  margin-right: 12px;
-  -webkit-box-shadow: 2px 6px 6px -4px lightblue;
-          box-shadow: 2px 6px 6px -4px lightblue;
-}
-
-body footer {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto 35px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 35px;
-  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body footer p {
-  font-size: 0.9em;
-}
-
-body footer .contacto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-body footer .contacto img {
-  width: 35px;
-}
-
-body footer h3 {
-  font-size: 1.2em;
-  text-align: end;
-  margin: 0 5px 3px 0;
+body .series img {
+  height: 145px;
+  -webkit-box-shadow: 2px 6px 6px -4px lightblue;
+          box-shadow: 2px 6px 6px -4px lightblue;
+  margin: 15px 5px;
 }
 /*# sourceMappingURL=style.css.map */

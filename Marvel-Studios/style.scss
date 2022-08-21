@@ -1,0 +1,210 @@
+:root {
+    --background-color: rgb(23, 35, 83);
+    --background-segundo: rgb(61, 76, 132);
+    --backgroud-tercero: rgb(124, 124, 124);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    text-align: center;
+    
+    .logo{
+        width: 160px;
+        margin: 15px;
+    }
+    
+    .nota{
+        display: flex;
+        .cartelera {
+            height: 145px;
+            box-shadow: 2px 6px 6px -4px lightblue;
+            margin: 15px 5px;
+            
+        }
+        article{
+            margin: 15px 5px;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                color: white;
+            }
+        }
+    }
+
+    .episodios{
+        display: flex;
+        margin: 10px 20px;
+        background-color: var(--backgroud-tercero);
+        padding: 3px;
+        border-radius: 5px;
+        img{
+            width: 100px;
+            height: 60px;
+        }
+        .descripcion{
+            display: flex;
+            flex-direction: column;
+
+            h2{
+                font-size: 1em;
+                text-align: center;
+                margin: auto 3px;
+
+            }
+            p{
+                display: none;
+            }
+        }
+    }
+}
+
+.nav {
+    background-color: black;
+    display: flex;
+    height: 35px;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+
+    i {
+        color: white;
+        cursor: pointer;
+        margin: auto 0;
+    }
+
+    //!menu hamburguesa
+    .main-header {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        margin: auto 0;
+        //position: absolute;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        margin-left: -100%;
+        transition: all 0.2s linear;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
+
+    .main-nav.show {
+        margin-left: 0;
+    }
+
+    .nav-links {
+        background-color: var(--background-segundo);
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .link-item {
+        margin-top: 2rem;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .link-item::after {
+        position: absolute;
+        content: "";
+        background-color: black;
+        bottom: -3px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        transition: 0.3s ease all;
+    }
+
+    .link-item:hover::after {
+        width: 100%;
+    }
+
+    .button-menu {
+        width: 100%;
+        height: 30px;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-bottom: 19px;
+    }
+
+    .button-menu span {
+        width: 25px;
+        height: 2px;
+        margin-bottom: 4px;
+        position: relative;
+        background: white;
+        border-radius: 3px;
+        transform-origin: 4px 0px;
+        transition: all 0.2s linear;
+        z-index: 100;
+    }
+
+    .button-menu.close span {
+        opacity: 1;
+        transform: rotate(45deg) translate(0px, 0px);
+        background: #ffffff;
+    }
+
+    .button-menu.close span:nth-child(2) {
+        transform: rotate(-45deg) translate(-8px, 5px);
+    }
+
+    .button-menu.close span:nth-child(3) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        .button-menu {
+            display: none;
+        }
+
+        .main-nav {
+            position: static;
+            margin-left: 0;
+            flex-basis: 70%;
+            height: 100%;
+        }
+
+        .nav-links {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            background: white;
+        }
+
+        .link-item {
+            display: inline-block;
+            margin-top: 0;
+            margin-right: 2rem;
+        }
+    }
+
+    //! fin menu hamburguesa
+}
