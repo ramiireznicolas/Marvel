@@ -45,6 +45,12 @@ body .nota article {
 
 body .nota article h1 {
   color: white;
+  margin-bottom: 3px;
+}
+
+body .nota article p {
+  font-size: 0.8em;
+  color: white;
 }
 
 body .episodios {
