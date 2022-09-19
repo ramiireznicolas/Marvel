@@ -68,7 +68,7 @@ body {
         }
 
         .nav-links {
-            background-color: var(--background-segundo);
+            background-color: rgba(61, 76, 132, 0.581);
             display: flex;
             flex-direction: column;
             width: 70%;
@@ -137,37 +137,7 @@ body {
 
         .button-menu.close span:nth-child(3) {
             display: none;
-        }
-
-        @media screen and (min-width: 768px) {
-            .button-menu {
-                display: none;
-            }
-
-            .main-nav {
-                position: static;
-                margin-left: 0;
-                flex-basis: 70%;
-                height: 100%;
-            }
-
-            .nav-links {
-                width: 100%;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: flex-end;
-                background: white;
-            }
-
-            .link-item {
-                display: inline-block;
-                margin-top: 0;
-                margin-right: 2rem;
-            }
-        }
-
-        //! fin menu hamburguesa
+        } //! fin menu hamburguesa
     }
 
     .series {

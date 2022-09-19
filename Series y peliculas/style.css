@@ -78,7 +78,7 @@ body .nav .main-nav.show {
 }
 
 body .nav .nav-links {
-  background-color: var(--background-segundo);
+  background-color: rgba(61, 76, 132, 0.581);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,40 +170,6 @@ body .nav .button-menu.close span:nth-child(2) {
 
 body .nav .button-menu.close span:nth-child(3) {
   display: none;
-}
-
-@media screen and (min-width: 768px) {
-  body .nav .button-menu {
-    display: none;
-  }
-  body .nav .main-nav {
-    position: static;
-    margin-left: 0;
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
-    height: 100%;
-  }
-  body .nav .nav-links {
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    background: white;
-  }
-  body .nav .link-item {
-    display: inline-block;
-    margin-top: 0;
-    margin-right: 2rem;
-  }
 }
 
 body .series {
