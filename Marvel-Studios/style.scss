@@ -69,7 +69,7 @@ body {
 }
 
 .nav {
-    background-color: black;
+    background-color: rgb(230, 36, 42);
     display: flex;
     height: 35px;
     align-items: center;
@@ -103,7 +103,7 @@ body {
         width: 100%;
         margin-left: -100%;
         transition: all 0.2s linear;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(230, 36, 42, 0.9);
         z-index: 100;
     }
 
@@ -112,7 +112,6 @@ body {
     }
 
     .nav-links {
-        background-color: rgba(61, 76, 132, 0.581);
         display: flex;
         flex-direction: column;
         width: 70%;
@@ -182,4 +181,32 @@ body {
     .button-menu.close span:nth-child(3) {
         display: none;
     }  //! fin menu hamburguesa
+}
+
+footer {
+    justify-content: center;
+    margin-bottom: 35px;
+    background-color: black;
+    color: white;
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .contacto {
+        display: flex;
+        justify-content: space-around;
+
+        img {
+            width: 35px;
+            background-color: white;
+            border-radius: 50px;
+        }
+    }
+
+    h3 {
+        font-size: 1.2em;
+        text-align: end;
+        margin: 0 5px 3px 0;
+    }
 }

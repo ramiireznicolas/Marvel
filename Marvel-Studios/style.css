@@ -89,7 +89,7 @@ body .episodios .descripcion p {
 }
 
 .nav {
-  background-color: black;
+  background-color: #e6242a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,7 +132,7 @@ body .episodios .descripcion p {
   margin-left: -100%;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(230, 36, 42, 0.9);
   z-index: 100;
 }
 
@@ -141,7 +141,6 @@ body .episodios .descripcion p {
 }
 
 .nav .nav-links {
-  background-color: rgba(61, 76, 132, 0.581);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,5 +232,38 @@ body .episodios .descripcion p {
 
 .nav .button-menu.close span:nth-child(3) {
   display: none;
+}
+
+footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 35px;
+  background-color: black;
+  color: white;
+}
+
+footer p {
+  font-size: 0.9em;
+}
+
+footer .contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .contacto img {
+  width: 35px;
+  background-color: white;
+  border-radius: 50px;
+}
+
+footer h3 {
+  font-size: 1.2em;
+  text-align: end;
+  margin: 0 5px 3px 0;
 }
 /*# sourceMappingURL=style.css.map */
