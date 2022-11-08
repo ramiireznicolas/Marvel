@@ -19,8 +19,82 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: var(--background-color);
+  background: black;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.916)), to(rgba(143, 59, 62, 0.916)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.916) 0%, rgba(143, 59, 62, 0.916) 100%);
   margin: auto;
+}
+
+body .modalmask {
+  position: fixed;
+  font-family: Arial, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .modalmask:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body .modalmask .modalbox {
+  width: 320px;
+  margin: 5px;
+  position: relative;
+  padding: 5px 20px 13px 20px;
+  background: #fff;
+  border-radius: 3px;
+  -webkit-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+}
+
+body .modalmask .resize {
+  margin: auto;
+  max-width: 320px;
+  max-height: 500px;
+}
+
+body .modalmask:target .resize {
+  margin: 50px auto;
+  width: auto;
+  height: 450px;
+}
+
+body .modalmask .close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: 1px;
+  text-align: center;
+  top: 1px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+body .modalmask .close:hover {
+  background: #FAAC58;
+  color: #222;
+}
+
+body .modalmask .moon-knight {
+  background-image: url(./assets/moon-knight.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
 }
 
 body .vista {
@@ -35,7 +109,9 @@ body .vista img {
 }
 
 body .nav {
-  background-color: var(--colorMarvel);
+  background: #8f3b3e;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(143, 59, 62, 0.916)), to(rgba(0, 0, 0, 0.916)));
+  background: linear-gradient(90deg, rgba(143, 59, 62, 0.916) 0%, rgba(0, 0, 0, 0.916) 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,139 +123,16 @@ body .nav {
       justify-content: space-around;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 94%;
   z-index: 10;
+  margin: 0 10px 10px;
+  border-radius: 20px;
 }
 
 body .nav i {
   color: white;
   cursor: pointer;
-  margin-bottom: 19px;
-}
-
-body .nav .main-header {
-  height: 50px;
-  width: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .nav .main-header .main-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 75%;
-  margin-left: -100%;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  background-color: var(--colorMarvel);
-  z-index: 100;
-}
-
-body .nav .main-header .main-nav .nav-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-body .nav .main-header .main-nav .nav-links .link-item {
-  margin-top: 3rem;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-}
-
-body .nav .main-header .main-nav .nav-links .link-item::after {
-  position: absolute;
-  content: "";
-  background-color: black;
-  bottom: -3px;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
-}
-
-body .nav .main-header .main-nav .nav-links .link-item:hover::after {
-  width: 100%;
-}
-
-body .nav .main-header .button-menu {
-  width: 100%;
-  height: 30px;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  margin-bottom: 19px;
-}
-
-body .nav .main-header .button-menu span {
-  width: 25px;
-  height: 2px;
-  margin-bottom: 4px;
-  position: relative;
-  background: white;
-  border-radius: 3px;
-  -webkit-transform-origin: 4px 0px;
-          transform-origin: 4px 0px;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  z-index: 100;
-}
-
-body .nav .main-header .main-nav.show {
-  margin-left: 0;
-}
-
-body .nav .main-header .button-menu.close span {
-  opacity: 1;
-  -webkit-transform: rotate(45deg) translate(0px, 0px);
-          transform: rotate(45deg) translate(0px, 0px);
-  background: #ffffff;
-}
-
-body .nav .main-header .button-menu.close span:nth-child(2) {
-  -webkit-transform: rotate(-45deg) translate(-8px, 5px);
-          transform: rotate(-45deg) translate(-8px, 5px);
-}
-
-body .nav .main-header .button-menu.close span:nth-child(3) {
-  display: none;
-}
-
-body .navDesktop {
-  display: none;
+  margin: auto;
 }
 
 body h1 {
@@ -235,7 +188,7 @@ body footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   background-color: black;
   color: white;
 }
@@ -262,33 +215,5 @@ body footer h3 {
   font-size: 1.2em;
   text-align: end;
   margin: 0 5px 3px 0;
-}
-
-@media (min-width: 770px) {
-  body .nav {
-    display: none;
-  }
-  body .navDesktop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: #e6242a;
-    height: 40px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    text-align: center;
-  }
-  body .navDesktop .link-item {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    margin: auto;
-  }
 }
 /*# sourceMappingURL=style.css.map */

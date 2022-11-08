@@ -22,30 +22,11 @@
     <div class="nav">
         <i class="fa-solid fa-house"></i>
         <i class="fa-solid fa-magnifying-glass"></i>
-        <header class="main-header">
-            <nav id="nav" class="main-nav">
-                <div class="nav-links">
-                    <a class="link-item" href="./Series y peliculas/peliculas.html">Peliculas</a>
-                    <a class="link-item" href="./Series y peliculas/series.html">Series</a>
-                </div>
-            </nav>
-            <button id="button-menu" class="button-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </header>
-    </div>
-
-    <div class="navDesktop">
-        <a class="link-item" href="./Series y peliculas/peliculas.html">Inicio</a>
-        <a class="link-item" href="./Series y peliculas/series.html">Buscar</a>
-        <a class="link-item" href="./Series y peliculas/peliculas.html">Peliculas</a>
-        <a class="link-item" href="./Series y peliculas/series.html">Series</a>
+        <i class="fa-solid fa-floppy-disk"></i>
+        <i class="fa-solid fa-user"></i>
     </div>
 
     <img src="./assets/Marvel_Logo.svg.png" alt="logo-marvel" class="logo">
-
 
     <!--CARROUSELLL-->
     <div class="vista">
@@ -55,26 +36,16 @@
                     <img src="./assets/blackwidowPortada.jpg" class="d-block w-100" alt="Black Widow">
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/blackwidowPortada.jpg" class="d-block w-100" alt="Black Widow">
+                    <img src="./assets/daredevil-ep1.jpg" class="d-block w-100" alt="Daredevil">
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/blackwidowPortada.jpg" class="d-block w-100" alt="Black Widow">
+                    <img src="./assets/ironman-1.jpg" class="d-block w-100" alt="Ironman 1">
                 </div>
                 <div class="carousel-item">
                     <a href="">
-                        <img src="./assets/blackwidowPortada.jpg" class="d-block w-100" alt="Black Widow">
+                        <img src="./assets/hawkeye-ep1.jpg" class="d-block w-100" alt="Hawkeye">
                     </a>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
     </div>
@@ -83,9 +54,15 @@
         <h2>Series</h2>
 
         <div class="cartelera">
-            <a href="./Marvel-Studios/moon-knight.html">
+            <a href="#moonKnight" >
                 <img src="./assets/moon-knight.jpg" alt="moon-knight">
             </a>
+            <div id="moonKnight" class="modalmask">
+                <div class="modalbox resize moon-knight">
+                    <a href="#close" title="Close" class="close">X</a>
+                </div>
+            </div>
+
             <a href="./Marvel-Studios/loki.html">
                 <img src="./assets/loki.jpg" alt="Loki">
             </a>
@@ -97,6 +74,31 @@
             </a>
             <a href="./Marvel-Studios/ms-marvel.html">
                 <img src="./assets/ms-marvel.jpg" alt="Ms-Marvel">
+            </a>
+            <a href="./Marvel-Studios/ms-marvel.html">
+                <img src="./assets/luke-cage.jpg" alt="Luke Cage">
+            </a>
+            <a href="./Marvel-Studios/ms-marvel.html">
+                <img src="./assets/defenders.jpg" alt="Defenders">
+            </a>
+        </div>
+    </div>
+
+    <div class="nota">
+        <h2>Peliculas</h2>
+
+        <div class="cartelera">
+            <a href="">
+                <img src="./assets/antman-2.jpg" alt="AntMan 2">
+            </a>
+            <a href="">
+                <img src="./assets/blackwidow.jpg" alt="Black Widow">
+            </a>
+            <a href="">
+                <img src="./assets/avengers-3.jpg" alt="Los vengadores 3">
+            </a>
+            <a href="">
+                <img src="./assets/spider-man.jpg" alt="Spider-man">
             </a>
         </div>
     </div>
@@ -114,6 +116,9 @@
             <a href="">
                 <img src="./assets/thor-3.jpg" alt="Thor 3">
             </a>
+            <a href="">
+                <img src="./assets/thor-4.jpg" alt="Thor 4">
+            </a>
         </div>
     </div>
 
@@ -127,6 +132,13 @@
             <a href="">
                 <img src="./assets/avengers-2.jpg" alt="Los vengadores 2">
             </a>
+            <a href="">
+                <img src="./assets/avengers-3.jpg" alt="Los vengadores 3">
+            </a>
+            <a href="">
+                <img src="./assets/avengers-4.jpg" alt="Los vengadores 4">
+            </a>
+
         </div>
     </div>
 
@@ -147,8 +159,6 @@
         </div>
         <h3>&copy; Nicolás Ramirez</h3>
     </footer>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">

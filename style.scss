@@ -16,8 +16,78 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--background-color);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.916) 0%, rgba(143,59,62,0.916) 100%);
     margin: auto;
+
+    .modalmask {
+        position: fixed;
+        font-family: Arial, sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        opacity:0;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        pointer-events: none;
+        text-align: center;
+        justify-content: center;
+        &:target {
+            opacity:1;
+            pointer-events: auto;
+        }
+        .modalbox{
+            width: 320px;
+            margin: 5px;
+            position: relative;
+            padding: 5px 20px 13px 20px;
+            background: #fff;
+            border-radius:3px;
+            -webkit-transition: all 500ms ease-in;
+            -moz-transition: all 500ms ease-in;
+            transition: all 500ms ease-in;
+             
+        }
+        .resize {
+            margin: auto;
+            max-width: 320px;
+            max-height: 500px;
+        }
+        &:target .resize{
+            margin: 50px auto;
+           width: auto;
+           height: 450px;
+        }
+        .close {
+            background: #606061;
+            color: #FFFFFF;
+            line-height: 25px;
+            position: absolute;
+            right: 1px;
+            text-align: center;
+            top: 1px;
+            width: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius:3px;
+      
+            &:hover {
+                background: #FAAC58;
+                color:#222;
+            }
+        }
+        .moon-knight{
+            background-image: url(./assets/moon-knight.jpg);
+            background-size: 100% 100%;
+            background-repeat: repeat;
+        }    
+    }
+   
+     
 
     .vista {
         margin: 5px auto 0;
@@ -31,113 +101,25 @@ body {
     }
 
     .nav {
-        background-color: var(--colorMarvel);
+        background: rgb(143,59,62);
+        background: linear-gradient(90deg, rgba(143,59,62,0.916) 0%, rgba(0,0,0,0.916) 100%);
         display: flex;
         height: 35px;
         align-items: center;
         justify-content: space-around;
         position: fixed;
         bottom: 0;
-        width: 100%;
+        width: 94%;
         z-index: 10;
+        margin: 0 10px 10px;
+        border-radius: 20px;
 
         i {
             color: white;
             cursor: pointer;
-            margin-bottom: 19px;
+            margin:auto;
         }
-
-        //!menu hamburguesa
-        .main-header {
-            height: 50px;
-            width: 50px;
-            display: flex;
-            align-items: center;
-            //position: absolute;
-            .main-nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                height: 100vh;
-                width: 75%;
-                margin-left: -100%;
-                transition: all 0.2s linear;
-                background-color: var(--colorMarvel);
-                z-index: 100;
-                .nav-links {
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-                    align-items: center;
-                    justify-content: flex-start;
-                    .link-item {
-                        margin-top: 3rem;
-                        color: white;
-                        text-decoration: none;
-                        font-weight: bold;
-                        position: relative;
-                        &::after {
-                            position: absolute;
-                            content: "";
-                            background-color: black;
-                            bottom: -3px;
-                            left: 0;
-                            width: 0%;
-                            height: 3px;
-                            transition: 0.3s ease all;
-                        }
-                        &:hover::after {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-            .button-menu {
-                width: 100%;
-                height: 30px;
-                border: none;
-                display: flex;
-                flex-direction: column;
-                background: none;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                margin-bottom: 19px;
-                span {
-                   width: 25px;
-                   height: 2px;
-                   margin-bottom: 4px;
-                   position: relative;
-                   background: white;
-                   border-radius: 3px;
-                   transform-origin: 4px 0px;
-                   transition: all 0.2s linear;
-                   z-index: 100;
-               }
-            }
-            .main-nav.show {
-                margin-left: 0;
-            }
-    
-            .button-menu.close span {
-                opacity: 1;
-                transform: rotate(45deg) translate(0px, 0px);
-                background: #ffffff;
-            }
-    
-            .button-menu.close span:nth-child(2) {
-                transform: rotate(-45deg) translate(-8px, 5px);
-            }
-    
-            .button-menu.close span:nth-child(3) {
-                display: none;
-            }//! fin menu hamburguesa
-        }
-    }
-
-    .navDesktop {
-        display: none;
-    }
+    } 
 
     h1 {
         display: none;
@@ -184,7 +166,7 @@ body {
 
     footer {
         justify-content: center;
-        margin-bottom: 35px;
+        margin-bottom: 45px;
         background-color: black;
         color: white;
 
@@ -207,34 +189,6 @@ body {
             font-size: 1.2em;
             text-align: end;
             margin: 0 5px 3px 0;
-        }
-    }
-}
-
-@media (min-width: 770px) {
-    body {
-        .nav {
-            display: none;
-        }
-
-        .navDesktop {
-            display: flex;
-            background-color: rgb(230, 36, 42);
-            height: 40px;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 10;
-            justify-content: space-around;
-            text-align: center;
-
-            .link-item {
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-                position: relative;
-                margin: auto;
-            }
         }
     }
 }
