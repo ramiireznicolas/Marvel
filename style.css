@@ -22,7 +22,6 @@ body {
   background: black;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.916)), to(rgba(143, 59, 62, 0.916)));
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.916) 0%, rgba(143, 59, 62, 0.916) 100%);
-  margin: auto;
 }
 
 body .modalmask {
@@ -67,7 +66,7 @@ body .modalmask .resize {
 }
 
 body .modalmask:target .resize {
-  margin: 50px auto;
+  margin: 40px auto;
   width: auto;
   height: 450px;
 }
@@ -92,9 +91,139 @@ body .modalmask .close:hover {
 }
 
 body .modalmask .moon-knight {
-  background-image: url(./assets/moon-knight.jpg);
+  background-image: url(./assets/fondoMoonknight.jpg);
   background-size: 100% 100%;
   background-repeat: repeat;
+}
+
+body .modalmask .loki {
+  background-image: url(./assets/fondoLoki.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .daredevil {
+  background-image: url(./assets/fondoDaredevil.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .hawkeye {
+  background-image: url(./assets/fondoHawkeye.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .ms-marvel {
+  background-image: url(./assets/fondoMs-Marvel.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .luke-cage {
+  background-image: url(./assets/fondoLukeCage.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .defenders {
+  background-image: url(./assets/fondoDefenders.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .antman {
+  background-image: url(./assets/FondoantMan.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .backwidow {
+  background-image: url(./assets/fondoBlackWidow.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .avengers3 {
+  background-image: url(./assets/fondoAvengers3.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .spider-man {
+  background-image: url(./assets/spider-man.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .thor1 {
+  background-image: url(./assets/thor-1.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .thor2 {
+  background-image: url(./assets/fondoThor2.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .thor3 {
+  background-image: url(./assets/fondoTho3.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .thor4 {
+  background-image: url(./assets/fondoThor4.webp);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .avengers1 {
+  background-image: url(./assets/fondoAvengers1.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .avengers2 {
+  background-image: url(./assets/fondoAvengers2.jpg);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .modalmask .avengers4 {
+  background-image: url(./assets/fondoAnvengers4.webp);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+}
+
+body .nav {
+  background: #8f3b3e;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(143, 59, 62, 0.916)), to(rgba(0, 0, 0, 0.916)));
+  background: linear-gradient(90deg, rgba(143, 59, 62, 0.916) 0%, rgba(0, 0, 0, 0.916) 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 10;
+  border-radius: 20px;
+  margin: 0px auto 10px;
+}
+
+body .nav i {
+  color: white;
+  cursor: pointer;
+  margin: auto;
 }
 
 body .vista {
@@ -105,33 +234,6 @@ body .vista {
 body .vista img {
   max-width: 650px;
   max-height: 300px;
-  margin: auto;
-}
-
-body .nav {
-  background: #8f3b3e;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(143, 59, 62, 0.916)), to(rgba(0, 0, 0, 0.916)));
-  background: linear-gradient(90deg, rgba(143, 59, 62, 0.916) 0%, rgba(0, 0, 0, 0.916) 100%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 35px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  position: fixed;
-  bottom: 0;
-  width: 94%;
-  z-index: 10;
-  margin: 0 10px 10px;
-  border-radius: 20px;
-}
-
-body .nav i {
-  color: white;
-  cursor: pointer;
   margin: auto;
 }
 
