@@ -49,6 +49,43 @@ body {
             -webkit-transition: all 500ms ease-in;
             -moz-transition: all 500ms ease-in;
             transition: all 500ms ease-in;
+
+            .button{
+                width: 200px;
+                height: 32px;
+                border: 1px solid red;
+                border-radius: 5px;
+                background-color: red;
+                bottom: 0;
+                color: white;
+                margin: 370px auto 0px;
+                &:hover{
+                    transition-duration: 0.1s;
+                    background-color: var(--colorMarvel);
+                }
+            }
+            .fa-play{
+                margin-right: 10px;
+            }
+
+            .close {
+                background: #606061;
+                color: #FFFFFF;
+                line-height: 25px;
+                position: absolute;
+                right: 1px;
+                text-align: center;
+                top: 1px;
+                width: 24px;
+                text-decoration: none;
+                font-weight: bold;
+                border-radius:3px;
+          
+                &:hover {
+                    background: #FAAC58;
+                    color:#222;
+                }
+            }
              
         }
         .resize {
@@ -57,27 +94,9 @@ body {
             max-height: 500px;
         }
         &:target .resize{
-            margin: 40px auto;
+            margin: 50px auto;
            width: auto;
            height: 450px;
-        }
-        .close {
-            background: #606061;
-            color: #FFFFFF;
-            line-height: 25px;
-            position: absolute;
-            right: 1px;
-            text-align: center;
-            top: 1px;
-            width: 24px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius:3px;
-      
-            &:hover {
-                background: #FAAC58;
-                color:#222;
-            }
         }
         .moon-knight{
             background-image: url(./assets/fondoMoonknight.jpg);

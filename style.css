@@ -59,19 +59,28 @@ body .modalmask .modalbox {
   transition: all 500ms ease-in;
 }
 
-body .modalmask .resize {
-  margin: auto;
-  max-width: 320px;
-  max-height: 500px;
+body .modalmask .modalbox .button {
+  width: 200px;
+  height: 32px;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: red;
+  bottom: 0;
+  color: white;
+  margin: 370px auto 0px;
 }
 
-body .modalmask:target .resize {
-  margin: 40px auto;
-  width: auto;
-  height: 450px;
+body .modalmask .modalbox .button:hover {
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  background-color: var(--colorMarvel);
 }
 
-body .modalmask .close {
+body .modalmask .modalbox .fa-play {
+  margin-right: 10px;
+}
+
+body .modalmask .modalbox .close {
   background: #606061;
   color: #FFFFFF;
   line-height: 25px;
@@ -85,9 +94,21 @@ body .modalmask .close {
   border-radius: 3px;
 }
 
-body .modalmask .close:hover {
+body .modalmask .modalbox .close:hover {
   background: #FAAC58;
   color: #222;
+}
+
+body .modalmask .resize {
+  margin: auto;
+  max-width: 320px;
+  max-height: 500px;
+}
+
+body .modalmask:target .resize {
+  margin: 50px auto;
+  width: auto;
+  height: 450px;
 }
 
 body .modalmask .moon-knight {
