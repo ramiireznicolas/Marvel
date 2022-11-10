@@ -19,6 +19,61 @@ body {
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0.916) 0%, rgba(143,59,62,0.916) 100%);
 
+    .preloader {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--background-oscuro);
+        top: 0;
+    
+        .marvel {
+            width: 200px;
+            margin-top: 150px;
+        }
+    
+        @keyframes ldio-f6hut07g61q {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+    
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    
+        .ldio-f6hut07g61q div {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border: 6px solid white;
+            border-top-color: transparent;
+            border-radius: 50%;
+        }
+    
+        .ldio-f6hut07g61q div {
+            animation: ldio-f6hut07g61q 2.272727272727273s linear infinite;
+            top: 100px;
+            left: 100px
+        }
+    
+        .loadingio-spinner-rolling-yexx8ffoci {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            overflow: hidden;
+        }
+    
+        .ldio-f6hut07g61q {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: translateZ(0) scale(1);
+            backface-visibility: hidden;
+            transform-origin: 0 0;
+        }
+    }
+
     .modalmask {
         position: fixed;
         font-family: Arial, sans-serif;
@@ -190,6 +245,10 @@ body {
         }
     }
 
+    .navDesktop{
+        display: none;
+    }
+
     .nav {
         background: rgb(143,59,62);
         background: linear-gradient(90deg, rgba(143,59,62,0.916) 0%, rgba(0,0,0,0.916) 100%);
@@ -291,6 +350,32 @@ body {
             font-size: 1.2em;
             text-align: end;
             margin: 0 5px 3px 0;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    body {
+
+        .nav{
+            display: none;
+        }
+        .navDesktop{
+            display: flex;
+            background: rgb(143,59,62);
+            background: linear-gradient(90deg, rgba(143,59,62,0.916) 0%, rgba(0,0,0,0.916) 100%);
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+            height: 40px;
+            border-radius: 0px 0px 15px 15px;
+            z-index: 10;
+            width: 100%;
+            i{
+                color: white;
+                cursor: pointer;
+                margin:auto;
+            }
         }
     }
 }

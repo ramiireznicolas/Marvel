@@ -24,6 +24,84 @@ body {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.916) 0%, rgba(143, 59, 62, 0.916) 100%);
 }
 
+body .preloader {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--background-oscuro);
+  top: 0;
+}
+
+body .preloader .marvel {
+  width: 200px;
+  margin-top: 150px;
+}
+
+@-webkit-keyframes ldio-f6hut07g61q {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes ldio-f6hut07g61q {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+body .preloader .ldio-f6hut07g61q div {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 6px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+}
+
+body .preloader .ldio-f6hut07g61q div {
+  -webkit-animation: ldio-f6hut07g61q 2.272727272727273s linear infinite;
+          animation: ldio-f6hut07g61q 2.272727272727273s linear infinite;
+  top: 100px;
+  left: 100px;
+}
+
+body .preloader .loadingio-spinner-rolling-yexx8ffoci {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+body .preloader .ldio-f6hut07g61q {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translateZ(0) scale(1);
+          transform: translateZ(0) scale(1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
 body .modalmask {
   position: fixed;
   font-family: Arial, sans-serif;
@@ -219,6 +297,10 @@ body .modalmask .avengers4 {
   background-repeat: repeat;
 }
 
+body .navDesktop {
+  display: none;
+}
+
 body .nav {
   background: #8f3b3e;
   background: -webkit-gradient(linear, left top, right top, from(rgba(143, 59, 62, 0.916)), to(rgba(0, 0, 0, 0.916)));
@@ -338,5 +420,33 @@ body footer h3 {
   font-size: 1.2em;
   text-align: end;
   margin: 0 5px 3px 0;
+}
+
+@media (min-width: 768px) {
+  body .nav {
+    display: none;
+  }
+  body .navDesktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #8f3b3e;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(143, 59, 62, 0.916)), to(rgba(0, 0, 0, 0.916)));
+    background: linear-gradient(90deg, rgba(143, 59, 62, 0.916) 0%, rgba(0, 0, 0, 0.916) 100%);
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 40px;
+    border-radius: 0px 0px 15px 15px;
+    z-index: 10;
+    width: 100%;
+  }
+  body .navDesktop i {
+    color: white;
+    cursor: pointer;
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
